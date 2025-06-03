@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { BaseChartDirective } from 'ng2-charts';
 import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
+import { NgIf, NgFor, NgClass } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 interface Tile {
   chartType: 'bar' | 'line' | 'pie';
@@ -12,7 +14,7 @@ interface Tile {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, BaseChartDirective, DragDropModule],
+  imports: [RouterOutlet, BaseChartDirective, DragDropModule, NgIf, NgFor, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
